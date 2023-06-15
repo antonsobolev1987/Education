@@ -24,34 +24,24 @@ if (dayWeek == 0 || dayWeek > 7)
     Console.WriteLine("Вы ввели число, несопоставимое ни с одним днем недели!");
 }
 */
-//Решение №2
 
+//Решение №2
 switch (dayWeek)
 {
-    //case 0:
-        //Console.WriteLine("Вы ввели число, несопоставимое ни с одним днем недели!");
-        //break;
     case 1:
-        Console.WriteLine("Вы ввели " + dayWeek + " день недели. Это будний день!");
-        break;
     case 2:
-        Console.WriteLine("Вы ввели " + dayWeek + " день недели. Это будний день!");
-        break;
     case 3:
-        Console.WriteLine("Вы ввели " + dayWeek + " день недели. Это будний день!");
-        break;
     case 4:
-        Console.WriteLine("Вы ввели " + dayWeek + " день недели. Это будний день!");
-        break;
     case 5:
         Console.WriteLine("Вы ввели " + dayWeek + " день недели. Это будний день!");
         break;
+
     case 6:
-        Console.WriteLine("Вы ввели " + dayWeek + " день недели. Это выходной!");
-        break;
     case 7:
         Console.WriteLine("Вы ввели " + dayWeek + " день недели. Это выходной!");
         break;
+
+    case 0:
     default:
         Console.WriteLine("Вы ввели число, несопоставимое ни с одним днем недели!");
         break;
