@@ -1,47 +1,61 @@
 ﻿// на вход координаты точки (X и Y)
 // X<>0 и Y<>0 и выдает номер четверти где эта точка
 
-void findCoord(int pointX, int pointY)
+internal class Program
 {
-
-    if (pointX > 0 && pointY > 0)
+    private static void Main(string[] args)
     {
-        Console.WriteLine("Точка находится в первой плоскости");
-    }
+        int findCoord(int pointX, int pointY)
+        {
+            int numberQuater;
 
-    if (pointX > 0 && pointY < 0)
-    {
-        Console.WriteLine("Точка находится в четвертой плоскости");
-    }
+            if (pointX > 0 && pointY > 0)
+            {
+                numberQuater = 1;
+            }
 
-    if (pointX < 0 && pointY < 0)
-    {
-        Console.WriteLine("Точка находится в третьей плоскости");
-    }
+            else if (pointX > 0 && pointY < 0)
+            {
+                numberQuater = 4;
+            }
 
-    if (pointX < 0 && pointY < 0)
-    {
-        Console.WriteLine("Точка находится во второй плоскости");
+            else if (pointX < 0 && pointY < 0)
+            {
+                numberQuater = 3;
+            }
+
+            else if (pointX < 0 && pointY < 0)
+            {
+                numberQuater = 2;
+            }
+            
+            else
+            {
+                numberQuater = 0;
+            }
+
+            return numberQuater;
+        }
+
+        void checkCoord(int pointX, int pointY)
+        {
+            if (pointX != 0 && pointY != 0)
+            {
+                int numberQuater = findCoord(pointX, pointY);
+                Console.WriteLine("Точка принадлежит " + numberQuater + " плоскости");
+            }
+
+            else
+            {
+                Console.WriteLine("Координаты не могут иметь нулевых значений!");
+            }
+        }
+
+        Console.WriteLine("Введите координату Х:");
+        int pointX = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Введите координату Y:");
+        int pointY = Convert.ToInt32(Console.ReadLine());
+
+        checkCoord(pointX, pointY);
     }
 }
-
-void checkCoord(int pointX, int pointY)
-{
-    if (pointX != 0 && pointY != 0)
-    {
-        Console.WriteLine("ОК");
-    }
-    else
-    {
-        Console.WriteLine("Координаты не могут иметь нулевых значений!");
-    }
-}
-
-Console.WriteLine("Введите координату Х:");
-int pointX = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите координату Y:");
-int pointY = Convert.ToInt32(Console.ReadLine());
-
-checkCoord(pointX, pointY);
-
-findCoord(pointX, pointY);
