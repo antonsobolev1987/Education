@@ -17,7 +17,7 @@ int coordYPointB = Convert.ToInt32(Console.ReadLine());
 
 double distAB(int coordXPointA, int coordYPointA, int coordXPointB, int coordYPointB)
 {
-    double result = Math.Sqrt(coordXPointB - coordXPointA) * (coordXPointB - coordXPointA) + (coordYPointB - coordYPointA) * (coordYPointB - coordYPointA);
+    double result = Math.Sqrt(Math.Pow(coordXPointB - coordXPointA, 2) + Math.Pow(coordYPointB - coordYPointA, 2));
     Console.WriteLine($"2D-расстояние между точками = {result:f2}");
     return result;
 
