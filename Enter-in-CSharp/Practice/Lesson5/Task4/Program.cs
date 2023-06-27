@@ -34,6 +34,6 @@ void countOfIndex(int [] countArray){
 Console.WriteLine($"->{count}");
 }
 
-int [] randomArray = randomArray();
-printArray(randomArray);
-countOfIndex(randomArray);
+int [] randomArr = randomArray();
+printArray(randomArr);
+countOfIndex(randomArr);
