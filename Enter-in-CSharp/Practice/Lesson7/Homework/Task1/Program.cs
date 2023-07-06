@@ -28,9 +28,11 @@ void Print2DArray(double[,] array2d)
 {
     for (int i = 0; i < array2d.GetLength(0); i++)
     {
+
         Console.Write("[");
         for (int j = 0; j < array2d.GetLength(1); j++)
         {
+
             Console.Write(array2d[i, j] + "  |  ");
         }
         Console.WriteLine("]");
