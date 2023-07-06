@@ -4,7 +4,8 @@ m = 3, n = 4.
 0 1 2 3 [0,0] [0,1] [0,2] [0,3]
 1 2 3 4 [1,0] [1,1] [1,2] [1,3]
 2 3 4 5
-*/
+
+
 void Print2DArray(int[,] array2d)
 {
     for (int i = 0; i < array2d.GetLength(0); i++)
@@ -34,3 +35,4 @@ int[,] FillArray(){
 
 int[,] secondarray = FillArray();
 Print2DArray(secondarray);
+*/
