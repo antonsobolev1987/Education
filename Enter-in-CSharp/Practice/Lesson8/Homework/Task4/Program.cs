@@ -8,16 +8,19 @@
 27(0,0,1) 90(0,1,1)
 26(1,0,1) 55(1,1,1
 */
-Console.Write("Задайте длину массива: ");
+Console.Clear();
+Console.Write("Задайте X массива: ");
 int userx = Convert.ToInt32(Console.ReadLine());
-Console.Write("Задайте ширину массива: ");
+Console.Write("Задайте Y массива: ");
 int usery = Convert.ToInt32(Console.ReadLine());
-Console.Write("Задайте глубину массива: ");
+Console.Write("Задайте Z массива: ");
 int userz = Convert.ToInt32(Console.ReadLine());
-int[,,] newArr = Created3DArray(userx,usery,userz);
+int[,,] newArr = Created3DArray(userx, usery, userz);
 ShowArray(newArr);
+FindIndex(newArr);
 
-int [,,]Created3DArray(int x, int y, int z)
+
+int[,,] Created3DArray(int x, int y, int z)
 {
     int[,,] createdArray = new int[x, y, z];
     for (int i = 0; i < x; i++)
@@ -72,6 +75,19 @@ void ShowArray(int[,,] printedarray)
     Console.WriteLine();
 }
 
-
-
-
+void FindIndex(int[,,] array3d)
+{
+    for (int i = 0; i < array3d.GetLength(0); i++)
+    {
+        for (int j = 0; j < array3d.GetLength(1); j++)
+        {
+            Console.Write($"x({i}) y({j})");
+            for (int k = 0; k < array3d.GetLength(2); k++)
+            {
+                Console.Write($" z({k}) = {array3d[i, j, k]}; ");
+            }
+            Console.WriteLine();
+        }
+        Console.WriteLine();
+    }
+}
